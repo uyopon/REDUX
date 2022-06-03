@@ -3,6 +3,10 @@ import Post from "./post";
 
 import React from "react";
 export default ({ posts }) => {
-    // console.log(posts)  МАССИВ ПРИШЕЛ
-    return posts.map(post => <Post post={post} id={post} />) // ТЕГИ КОМПОНЕНТ ALWAYS WITH ЗАГЛАВНОЙ БУКВЫ
+    
+
+    if(!posts.length){
+        return <p className="text-center">постов пока нету</p>
+    }
+    return posts.map(post => <Post post={post} key={post} />) // ТЕГИ КОМПОНЕНТ ALWAYS WITH ЗАГЛАВНОЙ БУКВЫ
 }
