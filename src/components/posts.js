@@ -1,7 +1,8 @@
-import post from "./post";
+import Post from "./post";
 
 
 import React from "react";
-export default ({posts})=>{
-return posts.map(post => <post post = {post}/>)
+export default ({ posts }) => {
+    // console.log(posts)  МАССИВ ПРИШЕЛ
+    return posts.map(post => <Post post={post} id={post} />) // ТЕГИ КОМПОНЕНТ ALWAYS WITH ЗАГЛАВНОЙ БУКВЫ
 }
