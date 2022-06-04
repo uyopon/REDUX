@@ -12,20 +12,17 @@ export default class PostForm extends React.Component {
         event.preventDefault()
     }
 
-
     render() {
         return (
 
             <form onSubmit= {this.submitHundler}>
                 <div className="form-group">
-                    <label htmlFor="exampleInputPassword 1">Password</label>
-                    <input type= 'password' className="form-control" id="exampleInputPassword1"></input>
+                    <label htmlFor="title">Заголовок поста</label>
+                    <input type= 'text' className="form-control mb-2" id="title"/>
+                    <button className="btn btn-success " type="submit">CREATE</button>
 
                 </div>
             </form>
-
-
-
         )
     }
 
